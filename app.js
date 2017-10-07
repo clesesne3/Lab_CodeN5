@@ -47,11 +47,17 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a,b,c){ //eslint-disable-line
-  var sum = a + b + c;
-  var product = a * b * c;
-  var statement1 = a + ' and ' + b + ' and ' + c + ' sum to ' + sum + '.';
+  var arr = [a,b,c]; // create array with parameters as the elements
+  var newSum = 0;
+  var product = 1;
+  // loop through array to update sum and product
+  for (var i = 0; i < arr.length; i++) {
+    newSum = sum(newSum, arr[i])[0];
+    product = multiply(product, arr[i])[0];
+  }
+  var statement1 = a + ' and ' + b + ' and ' + c + ' sum to ' + newSum + '.';
   var statement2 = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + product + '.';
-  var arr = [sum, product, statement1, statement2];
+  var arr = [newSum, product, statement1, statement2];
   return arr;
 }
 
