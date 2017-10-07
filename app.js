@@ -71,7 +71,10 @@ Test this function by hand in the console to get it working, and when you think 
 var testArray = [2,3,4]; //eslint-disable-line
 
 function sumArray(testArray){ //eslint-disable-line
-  var sumA = sum(sum(testArray[0], testArray[1])[0], testArray[2])[0]; // sum first two elements of testArray, then sum result with remaining(third) element of testArray
+  var sumA = 0; //initialize sum to be incremented
+  for (var i = 0; i < testArray.length; i++) {
+    sumA = sum(sumA, testArray[i])[0]; //loop through testArray to add elements
+  }
   var statement = testArray[0] + ',' + testArray[1] + ',' + testArray[2] + ' was passed in as an array of numbers, and ' + sumA + ' is their sum.';
   var arr = [sumA, statement];
   return arr;
