@@ -94,7 +94,10 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(testArray){ //eslint-disable-line
-
+  var product = sumAndMultiply(testArray[0], testArray[1], testArray[2])[1]; //use sumAndMultiply to calculate product of testArray elements
+  var statement = 'The numbers ' + testArray[0] + ',' + testArray[1] + ',' + testArray[2] + ' have a product of ' + product + '.';
+  var arr = [product, statement];
+  return arr;
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
