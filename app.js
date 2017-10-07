@@ -14,7 +14,7 @@ function sum(a,b) { //eslint-disable-line
 }
 
 // Here is the test for sum(); uncomment it to run it
-// testSum(4, 7);
+testSum(4, 7);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -33,7 +33,7 @@ function multiply(a,b){ //eslint-disable-line
 }
 
 // Here is the test for multiply(); uncomment it to run it
-// testMultiply(5,9);
+testMultiply(5,9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -56,7 +56,7 @@ function sumAndMultiply(a,b,c){ //eslint-disable-line
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -81,7 +81,7 @@ function sumArray(testArray){ //eslint-disable-line
 }
 
 // Here is the test for sumArray(); uncomment it to run it
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -103,4 +103,14 @@ function multiplyArray(testArray){ //eslint-disable-line
 // Here is the test for multiplyArray(); uncomment it to run it
 testMultiplyArray(2,3,4);
 
+// STRETCH GOAL -- update content of <p> elements with respective return messages
+function updateContent() {
+  document.getElementById('p1').innerHTML = sum(4,7)[1];
+  document.getElementById('p2').innerHTML = multiply(5,9)[1];
+  document.getElementById('p3').innerHTML = sumAndMultiply(4,7,5)[2];
+  document.getElementById('p4').innerHTML = sumAndMultiply(4,7,5)[3];
+  document.getElementById('p5').innerHTML = sumArray(testArray)[1];
+  document.getElementById('p6').innerHTML = multiplyArray(testArray)[1];
+}
+updateContent();
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
